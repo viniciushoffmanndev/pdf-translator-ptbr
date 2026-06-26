@@ -23,9 +23,10 @@ Muitos equipamentos, sistemas e componentes possuem manuais densos e detalhados 
 
 ## ✨ Funcionalidades
 
-* **Interface Amigável:** Utiliza o `tkinter` nativo para abrir caixas de diálogo do sistema operacional, eliminando a necessidade de digitar caminhos de pastas no terminal.
+* **Interface e Feedback Visual:** Utiliza o `tkinter` nativo para navegação de arquivos, além de exibir uma **barra de progresso em tempo real** (`ttk.Progressbar`) e alertas de sucesso (`messagebox`), oferecendo uma experiência fluida de software desktop.
+* **Resiliência Anti-Bloqueio (Retry System):** Algoritmo inteligente com controle de cadência (`time.sleep`) e laço de repetição. Evita bloqueios por *Rate Limit* da API do Google em documentos extensos (centenas de páginas), garantindo que nenhuma tradução seja perdida.
 * **Preservação Visual Completa:** Como opera substituindo o texto nas coordenadas exatas, imagens, esquemas, tabelas e o design da página permanecem 100% intocáveis.
-* **Ajuste Dinâmico de Fonte (Shrink-to-Fit):** Algoritmo inteligente que recalcula o tamanho da fonte (através de um laço `while`) garantindo que o texto traduzido encaixe perfeitamente na caixa original sem sobreposições.
+* **Ajuste Dinâmico de Fonte (Shrink-to-Fit):** Algoritmo que recalcula o tamanho da fonte dinamicamente garantindo que o texto traduzido encaixe perfeitamente na caixa original sem sobreposições.
 * **Higienização de Caracteres:** Camada de segurança (sanitização e re-encoding) que limpa o retorno do tradutor, prevenindo falhas gráficas no PDF final.
 * **Mapeamento de Destino:** Identifica a pasta de origem do arquivo selecionado e gera o arquivo formatado no mesmo diretório com o sufixo `_layout_mantido`.
 
